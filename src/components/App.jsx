@@ -10,7 +10,6 @@ class App extends Component{
     isShowModal: false,
   }
 
-  
   showModal =()=>{
     this.setState({ isShowModal: true})
   }
@@ -21,18 +20,8 @@ class App extends Component{
 
   render(){
 
-  
   return (
-    <div
-      // style={{
-      //   height: '100vh',
-      //   display: 'flex',
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
-      //   fontSize: 40,
-      //   color: '#010101'
-      // }}
-    >
+    <div>
       {/* React homework template */}
        {this.state.isShowModal &&
         <Modal closeModal={this.closeModal}>
@@ -45,7 +34,5 @@ class App extends Component{
   )
 }
 };
-
-
 
 export default App;
