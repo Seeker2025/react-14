@@ -1,7 +1,22 @@
+import { Component } from 'react';
 import css from './Modal.module.css';
 
-const Modal = ({ children, closeModal }) =>{
-    return (
+class Modal extends Component{
+    state ={
+
+    }
+
+    componentDidMount(){
+        window.addEventListener('keydown', this.handlePressEsc )
+    }
+
+    handlePressEsc = (e) => {
+        if(e.code === 'Escape') this.props.closeModal();
+    }
+
+    render(){
+        const{ closeModal, children } = this.props;
+         return (
         <div className={css.modal}>
             <div className="modalDialog">
                 <div  className="modalContent">
@@ -19,6 +34,9 @@ const Modal = ({ children, closeModal }) =>{
             </div>    
         </div>
     )
+
+    }
+
 }
 
 export default Modal;

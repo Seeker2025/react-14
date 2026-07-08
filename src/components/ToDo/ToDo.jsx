@@ -20,6 +20,7 @@ const ToDo = ({ todo, handleCheckCompleted, handleDelete })=>{
 
                 <div className={css.col}>
                     <button
+                    disabled={!todo.completed}
                     type="button"
                     className={css.btnClose}
                     arial-label ="Close"
