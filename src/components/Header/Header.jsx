@@ -4,7 +4,7 @@ const Header = ({ showModal }) => {
 return (
     <nav className={css.navbar}>
         <div className={css.containerFluid}>
-            <span className="novbar-brand">
+            <span>
                 Navbar
             </span>
             <button className={css.btn} onClick={showModal}>Open Modal</button>

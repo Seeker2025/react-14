@@ -77,33 +77,33 @@ addToDo=(value)=>{
     render(){
         return (
           
-                <>
-                <h1>My To-Do List</h1>
-                {this.state.isDelete&&
-                <div class="alert alert-danger" role="alert">
-                To-do delete successfully
-                </div>
-                }
-                {this.state.isCreate&&
-                <div class="alert alert-success" role="alert">
-                Create to-do successfully
-                </div>
-                }
-                <FormToDo addToDo ={this.addToDo}/>
-                {this.state.todoList &&(<ul className={css.listGroup}>
-                    {this.state.todoList.map((todo)=>(
-                        <ToDo
-                         key={todo.id}
-                         todo={todo}
-                         handleCheckCompleted={this.handleCheckCompleted}
-                         handleDelete={this.handleDelete}
-                         />
-                    ))}
+                    <>
+                    <h1>My To-Do List</h1>
+                    {this.state.isDelete&&
+                    <div class="alert alert-danger" role="alert">
+                    To-do delete successfully
+                    </div>
+                    }
+                    {this.state.isCreate&&
+                    <div class="alert alert-success" role="alert">
+                    Create to-do successfully
+                    </div>
+                    }
+                    <FormToDo addToDo ={this.addToDo}/>
+                    {this.state.todoList &&(<ul className={css.listGroup}>
+                        {this.state.todoList.map((todo)=>(
+                            <ToDo
+                            key={todo.id}
+                            todo={todo}
+                            handleCheckCompleted={this.handleCheckCompleted}
+                            handleDelete={this.handleDelete}
+                            />
+                        ))}
 
-                </ul>)}
-            </>
-           )
-        
+                    </ul>)}
+                </>
+            )
+            
     }
 }
 

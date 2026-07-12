@@ -24,10 +24,10 @@ class Modal extends Component{
         const{ closeModal, children } = this.props;
          return (
         <div className={css.modal}>
-            <div className="modalDialog">
-                <div  className="modalContent">
-                    <div  className="modalHeader">
-                        <h5  className="modalTitle">Modal</h5>
+            <div>
+                <div>
+                    <div>
+                        <h5>Modal</h5>
                         <button
                             type="button"
                             className={css.btnClose}
@@ -35,7 +35,7 @@ class Modal extends Component{
                             onClick={closeModal}
                         >&#10006;</button>
                     </div>
-                    <div className="modalBody">{children}</div>
+                    <div>{children}</div>
                 </div>
             </div>    
         </div>
