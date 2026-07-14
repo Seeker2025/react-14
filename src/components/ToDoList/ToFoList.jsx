@@ -48,10 +48,13 @@ class ToDoList extends Component {
     handleCheckCompleted=(id)=>{
         this.setState((prevState)=>{
             return {
-todoList: prevState.todoList.map((todo)=>
-    todo.id ===id
+    todoList: prevState.todoList.map((todo)=>{
+        console.log(todo);
+    return todo.id ===id
     ?{...todo, completed: !todo.completed}
-    :todo)
+    :todo
+    }
+)
             }
 
         })

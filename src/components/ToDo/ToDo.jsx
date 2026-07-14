@@ -26,7 +26,9 @@ const ToDo = ({ todo, handleCheckCompleted, handleDelete })=>{
                     arial-label ="Close"
                     onClick={()=>handleDelete(todo.id)}
                     >&#10006;</button>
-                </div>    
+                </div> 
+
+                <p>{todo.id}</p>   
             </div>
         </li>
     )

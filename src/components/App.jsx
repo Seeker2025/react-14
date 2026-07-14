@@ -24,10 +24,8 @@ class App extends Component{
     <div>
       {/* React homework template */}
        {this.state.isShowModal &&
-
-        <Modal closeModal={this.closeModal}>
-
-        </Modal>}
+       <Modal closeModal={this.closeModal}>Text. A lot of text</Modal>
+       }
 
       <Header showModal={this.showModal}/>
       <ToDoList/>
